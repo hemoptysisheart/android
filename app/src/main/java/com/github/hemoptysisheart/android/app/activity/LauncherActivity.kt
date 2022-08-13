@@ -1,4 +1,4 @@
-package com.github.hemoptysisheart.android
+package com.github.hemoptysisheart.android.app.activity
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -12,14 +12,18 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.github.hemoptysisheart.android.ui.theme.AndroidStudyTheme
 
-class MainActivity : ComponentActivity() {
+class LauncherActivity : ComponentActivity() {
+    companion object {
+        val TAG = LauncherActivity::class.simpleName
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
             AndroidStudyTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colors.background) {
-                    Greeting("Android")
+                    LauncherLayout()
                 }
             }
         }
@@ -27,14 +31,14 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(name: String) {
-    Text(text = "Hello $name!")
+fun LauncherLayout() {
+    Text(text = "Hello!")
 }
 
-@Preview(showBackground = true)
 @Composable
-fun DefaultPreview() {
+@Preview(showBackground = true)
+fun LauncherPreview() {
     AndroidStudyTheme {
-        Greeting("Android")
+        LauncherLayout()
     }
 }
