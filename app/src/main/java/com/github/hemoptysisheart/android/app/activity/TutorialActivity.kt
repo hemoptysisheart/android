@@ -6,20 +6,16 @@ import android.os.Bundle
 import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.*
-import androidx.compose.material.Button
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
-import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
-import com.github.hemoptysisheart.android.R
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
+import com.github.hemoptysisheart.android.app.ui.compose.tutorial.*
 import com.github.hemoptysisheart.android.ui.theme.AndroidStudyTheme
 import com.github.hemoptysisheart.domain.preferences.Preferences
 import dagger.hilt.android.AndroidEntryPoint
@@ -56,25 +52,16 @@ class TutorialActivity : ComponentActivity() {
 
 @Composable
 fun TutorialLayout(onComplete: (context: Context) -> Unit = {}) {
-    val context = LocalContext.current
-
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .padding(30.dp),
-        verticalArrangement = Arrangement.Center,
-        horizontalAlignment = Alignment.CenterHorizontally
-    ) {
-        Text(text = "Tutorial", fontSize = 50.sp)
-        Spacer(modifier = Modifier.height(120.dp))
-        Button(onClick = { onComplete(context) }, modifier = Modifier.padding(12.dp)) {
-            Text(text = stringResource(id = R.string.label_complete), fontSize = 24.sp)
-        }
+    val navController = rememberNavController()
+    NavHost(navController = navController, startDestination = DEST_STEP_1) {
+        composable(DEST_STEP_1) { Step1(navController) }
+        composable(DEST_STEP_2) { Step2(navController) }
+        composable(DEST_STEP_3) { Step3(navController, onComplete) }
     }
 }
 
-@Preview(showBackground = true)
 @Composable
+@Preview(showBackground = true)
 fun TutorialLayoutPreview() {
     AndroidStudyTheme {
         TutorialLayout()

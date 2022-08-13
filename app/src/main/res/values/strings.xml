@@ -5,6 +5,8 @@
     <string name="label_close">닫기</string>
     <string name="label_confirm">승인</string>
     <string name="label_complete">완료</string>
+    <string name="label_navigate_backward">뒤로</string>
+    <string name="label_navigate_forward">다음</string>
 
     <string name="launcher_main_message">Welcome!</string>
 
