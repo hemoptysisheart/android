@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">Android Study</string>
+    <string name="label_ok">확인</string>
+    <string name="label_cancel">취소</string>
+    <string name="label_close">닫기</string>
+    <string name="label_confirm">승인</string>
+    <string name="label_complete">완료</string>
+    <string name="label_navigate_backward">뒤로</string>
+    <string name="label_navigate_forward">다음</string>
+
+    <string name="launcher_main_message">Welcome!</string>
+
+    <string name="tutorial_title">Tutorial</string>
+    <string name="tutorial_navigate_to_main_button">OK</string>
+
+    <string name="main_title">Main</string>
 </resources>
