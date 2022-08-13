@@ -24,12 +24,12 @@
         <activity
             android:name=".app.activity.TutorialActivity"
             android:exported="false"
-            android:label="@string/title_activity_tutorial"
+            android:label="@string/tutorial_title"
             android:theme="@style/Theme.AndroidStudy" />
         <activity
             android:name=".app.activity.MainActivity"
             android:exported="false"
-            android:label="@string/title_activity_main"
+            android:label="@string/main_title"
             android:theme="@style/Theme.AndroidStudy" />
     </application>
 </manifest>

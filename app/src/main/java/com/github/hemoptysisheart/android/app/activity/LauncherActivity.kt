@@ -68,7 +68,7 @@ fun LauncherLayout(navigateTo: () -> Intent = { Intent() }) {
         verticalArrangement = Arrangement.Center
     ) {
         Text(
-            text = stringResource(id = R.string.activity_launcher_message),
+            text = stringResource(id = R.string.launcher_main_message),
             fontSize = 30.sp,
             fontWeight = FontWeight.Bold
         )

@@ -23,7 +23,7 @@ class TutorialPrefModel(
 
     override var enable: Boolean
         get() = sharedPreferences.getBoolean(KEY_ENABLE, false)
-        internal set(value) {
+        set(value) {
             editor.putBoolean(KEY_ENABLE, value)
             editor.apply()
         }
