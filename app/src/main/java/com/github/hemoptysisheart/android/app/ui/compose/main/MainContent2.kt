@@ -10,9 +10,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
-import com.github.hemoptysisheart.android.app.ui.compose.component.BottomNavigation
-import com.github.hemoptysisheart.android.app.ui.compose.component.MenuKey
-
+import com.github.hemoptysisheart.android.app.ui.compose.main.MenuKey.MENU_2
 
 const val DEST_MAIN_CONTENT_2 = "DEST_MAIN_CONTENT_2"
 
@@ -22,7 +20,7 @@ fun MainContent2(navController: NavHostController = rememberNavController()) {
         Spacer(modifier = Modifier.weight(0.5F))
         Text(text = "Main Content #2")
         Spacer(modifier = Modifier.weight(1.0F))
-        BottomNavigation(navController, MenuKey.MENU_2)
+        BottomNavigation(navController, MENU_2)
     }
 }
 

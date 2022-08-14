@@ -10,8 +10,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
-import com.github.hemoptysisheart.android.app.ui.compose.component.BottomNavigation
-import com.github.hemoptysisheart.android.app.ui.compose.component.MenuKey.MENU_1
+import com.github.hemoptysisheart.android.app.ui.compose.main.MenuKey.MENU_1
 
 const val DEST_MAIN_CONTENT_1 = "DEST_MAIN_CONTENT_1"
 
