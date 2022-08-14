@@ -25,17 +25,19 @@ fun MainContent3(
     navController: NavHostController = rememberNavController(),
     viewModel: TutorialPrefViewModel = viewModel()
 ) {
-//    Log.v(TAG, "args : navController=$navController, viewModel=$viewModel")
+    Log.v(TAG, "args : navController=$navController, viewModel=$viewModel")
 
-    Column(modifier = Modifier.fillMaxSize(), horizontalAlignment = Alignment.CenterHorizontally) {
+    Column(
+        modifier = Modifier.fillMaxSize(),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
         Box(
             modifier = Modifier
                 .weight(1.0F)
                 .padding(10.dp)
         ) {
             Row(
-                modifier = Modifier
-                    .fillMaxWidth(),
+                modifier = Modifier.fillMaxWidth(),
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Text(text = stringResource(R.string.pref_tutorial_switch_label))
