@@ -74,7 +74,7 @@ fun LauncherLayout(navigateTo: () -> Intent = { Intent() }) {
     }
 
     LaunchedEffect(true) {
-        delay(3_000L)
+        delay(2_000L)
 
         val intent = navigateTo()
         Log.v(TAG, "#LaunchedEffect : intent=$intent")
