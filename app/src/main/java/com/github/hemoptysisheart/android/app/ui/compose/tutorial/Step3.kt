@@ -15,7 +15,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.github.hemoptysisheart.android.R
 
-const val DEST_STEP_3 = "STEP_3"
+const val DEST_STEP_3 = "DEST_STEP_3"
 
 @Composable
 fun Step3(
