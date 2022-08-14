@@ -16,7 +16,7 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-class CoreModuleConfiguration {
+open class CoreModuleConfiguration {
     companion object {
         val TAG = CoreModuleConfiguration::class.simpleName
     }
