@@ -12,8 +12,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.github.hemoptysisheart.android.app.ui.compose.main.DEST_MAIN
-import com.github.hemoptysisheart.android.app.ui.compose.main.Main
+import com.github.hemoptysisheart.android.app.ui.compose.main.*
 import com.github.hemoptysisheart.android.ui.theme.AndroidStudyTheme
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -39,8 +38,10 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun MainLayout() {
     val navController = rememberNavController()
-    NavHost(navController = navController, startDestination = DEST_MAIN) {
-        composable(DEST_MAIN) { Main() }
+    NavHost(navController = navController, startDestination = DEST_MAIN_CONTENT_1) {
+        composable(DEST_MAIN_CONTENT_1) { MainContent1(navController) }
+        composable(DEST_MAIN_CONTENT_2) { MainContent2(navController) }
+        composable(DEST_MAIN_CONTENT_3) { MainContent3(navController) }
     }
 }
 
