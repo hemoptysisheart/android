@@ -6,12 +6,13 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
 @HiltViewModel
-class TutorialPrefViewModel @Inject constructor(
-    private val preferences: Preferences
-) : ViewModel() {
+class TutorialPrefViewModel @Inject constructor() : ViewModel() {
     companion object {
         val TAG = TutorialPrefViewModel::class.simpleName
     }
+
+    @Inject
+    lateinit var preferences: Preferences
 
     var enable: Boolean
         get() = preferences.tutorial.enable
