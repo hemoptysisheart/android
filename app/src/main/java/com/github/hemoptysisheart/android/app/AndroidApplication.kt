@@ -1,4 +1,4 @@
-package com.github.hemoptysisheart.android
+package com.github.hemoptysisheart.android.app
 
 import android.app.Application
 import android.util.Log
